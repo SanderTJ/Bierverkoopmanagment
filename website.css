@@ -1,0 +1,21 @@
+body  {
+    background-color: black;
+    
+}
+h1 {
+    color: #cccccc;
+    margin-top: 30%;
+    float: right;
+    width: 60%;
+}
+div {
+    color: #cccccc;
+    float: right;
+    width: 60%;
+}
+button{
+    width: 20%;
+    margin-top: 15%;
+    margin-right: -20%;
+    float: right;
+}
