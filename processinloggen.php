@@ -1,14 +1,14 @@
 <?php
-if (strlen($_POST["wachtwoord"]) < 8) {
+if (strlen($_POST["password"]) < 10) {
     die("wachtwoord moet tenmiste 10 karakters hebben");
 }
 
 
-if ( ! preg_match("/[0-9]/", $_POST["wachtwoord"])) {
+if ( ! preg_match("/[0-9]/", $_POST["password"])) {
     die("wachtwoord moet tenminste 1 letter hebben");
 }
 
-if  ( ! preg_match("/[0-9]/", $_POST["wachtwoord"])) {
+if  ( ! preg_match("/[0-9]/", $_POST["password"])) {
     die("wachtwoord moet tenminste 1 nummer hebben");
 }
 if(!empty($_POST["email"])) {
@@ -17,9 +17,11 @@ if(!empty($_POST["email"])) {
 
 print_r($_POST);
 
-$password_hash = password_hash($_POST["wachtwoord"], PASSWORD_DEFAULT);
+$password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 $mysqli = require __DIR__ . "./database.php";
+
+
 
 
 
