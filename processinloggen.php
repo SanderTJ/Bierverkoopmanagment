@@ -1,6 +1,6 @@
 <?php
-if (strlen($_POST["password"]) < 10) {
-    die("wachtwoord moet tenmiste 10 karakters hebben");
+if (strlen($_POST["password"]) < 8) {
+    die("wachtwoord moet tenmiste 8 karakters hebben");
 }
 
 
@@ -15,20 +15,16 @@ if(!empty($_POST["email"])) {
     $email = $_POST["email"];
 }
 
-print_r($_POST);
+
 
 $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+print_r($_POST);
+var_dump($password_hash);
 
-$mysqli = require __DIR__ . "./database.php";
+$mysqli = require __DIR__ . "/database.php";
 
-
-
-
-
-$mysqli = require __DIR__ . "./database.php";
-
-$sql = "INSERT INTO user (email, password.hash)
-        VALUES (?,?)";
+$sql = "INSERT INTO user (email, password_hash)
+        VALUES (?, ?)";
 
 $stmt = $mysqli->stmt_init();
 
@@ -36,10 +32,13 @@ $stmt->prepare($sql);
 
 $stmt->bind_param("ss",
                  $_POST["email"],
-                 $_POST["password.hash"]);
+                 $password_hash);
                  
+$stmt->execute();
 
-if ($stmt->execute)
+header("location: index.php");
+
+echo "inloggen succesvol";
 
 
 
@@ -56,7 +55,6 @@ if ($stmt->execute)
 <html lang="nl">
 <label> Email is <?php echo $email; ?> </label>
 </html>
-print_r($_POST);
-var_dump($password_hash);
+
 
 
