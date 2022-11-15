@@ -39,16 +39,6 @@ $stmt->execute();
 header("location: index.php");
 
 echo "inloggen succesvol";
-
-
-
-
-
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
