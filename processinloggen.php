@@ -23,8 +23,6 @@ $mysqli = require __DIR__ . "./database.php";
 
 
 
-
-
 $mysqli = require __DIR__ . "./database.php";
 
 $sql = "INSERT INTO user (email, password.hash)
