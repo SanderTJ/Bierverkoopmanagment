@@ -1,0 +1,22 @@
+h1{
+    width: 60%;
+    float: right;
+    margin-top: -10%;
+}
+
+.row {
+    margin-top: 20%;
+    width: 30%;
+    right: 100%;
+    left: -10%;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    float:right;
+  }
+select{
+    width:125%;
+}
+
