@@ -1,11 +1,11 @@
 <?php
 
 $HOST = "localhost";
-$dbname = "inloggen.db";
+$dbname = "bestellen.db";
 $username = "root";
 $password = "";
 
-$mysqli = new mysqli($HOST, $username, $password, $dbname);
+$mysqli = new mysqli(hostname: $HOST, username: $username, password: $password, database: $dbname);
 
 if ($mysqli->connect_errno) {
      die("Connection error: " . $mysqli->connect_error);
