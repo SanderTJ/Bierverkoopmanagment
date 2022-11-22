@@ -11,23 +11,53 @@
             border-top-left-radius: 25px;
             border-bottom-right-radius: 25px;
             border-top-right-radius: 25px;
-            padding-left: 5%;
-            padding-right: 5%;
+            margin-right: 5%;
+            background-color: rgb(95, 95, 95);
+            color: aliceblue;
            }
           .Admin{
-            box-sizing: content-box;
-            width: 80px;
-            height: 45px;
-            border: 2px solid black;
-            border-bottom-left-radius: 15px;
-            border-top-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            border-top-right-radius: 15px;
-            padding-left: 70%;
-            box-align: left;
+            position:absolute;
+            top: 5vh;
+            height: 4vh;
+            width: 4vw;
+            background-color: #fff;
+            color: #000;
+            border:5px solid black;
+            border-radius: 1vw;
+            text-decoration: none;
+            text-align: center;
+            margin-left: 70%;
+            
+           } 
+           .Admin:hover{
+            cursor: pointer;
+            background-color: #000;
+            color: #fff;
+            border-color: #fff;
+           }
+           .Login{
+            position:absolute;
+            top: 5vh;
+            height: 4vh;
+            width: 4vw;
+            background-color: #fff;
+            color: #000;
+            border:5px solid black;
+            border-radius: 1vw;
+            text-decoration: none;
+            text-align: center;
+            margin-left: 80%;
+
+           }
+           .Login:hover{
+            cursor: pointer;
+            background-color: #000;
+            color: #fff;
+            border-color: #fff;
            }
         </style>
     </head>
+    <body>
         <div class="info ">
             <p>Voor vragen kan u mailen naar onderstaand Email adres.</p>
             <p>Als u een bedrijf bent kunt u naar oonderstaand Email adres bellen, om een acount aan te maken</p>
@@ -35,9 +65,8 @@
             <br>
             <p>📧  bierverkoopbv@Gmail.com</p>
             <p>📞 o6 12345678</p>
-    </div>
-    <div class="Admin"> 
-        <h2>Admin </h2>
-    </div>
-    
+        </div>
+        <a class="Admin" href="#nogbezig">Admin</a>
+        <a class="Login" href="/website.html">Login</a>
+    </body>
 </html>
