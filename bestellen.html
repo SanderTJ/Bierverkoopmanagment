@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html nl>
+<head>
+    <title> bestelpagina </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./bestellen.css">
+    <style>
+     .flex-container {
+     display: flex;
+     }
+     .bestelformulier{
+        margin: auto;
+  width: 50%;
+  padding: 10px;
+     }
+    </style>
+</head>
+<body>
+
+    <h1> Bestelpagina </h1>
+
+        <div id="bier">
+            <label for="bier"> </label>
+              <form action="bestellen.php" method="post">
+              <div class="row">          
+                <div class="flex-container">
+                    <div><img src="https://i0.wp.com/brouwpunt.nl/wp-content/uploads/2021/07/Bier.png?fit=603%2C399&ssl=1"width="100%"></div>
+                    <div class="bestelformulier">
+                        <h3>Bestellen</h3>
+                        <input type="text" name="Naam" placeholder="Naam" required>
+                        <br>
+                        <input type="email" name="Email" placeholder="Email" required>
+                        <br>
+                        <input type="tell" name="Telefoon" placeholder="Telefoon" required>
+                        <br>
+                        <input type="text" name="Postcode" placeholder="Postcode" required>
+                        <br>
+                        <input type="text" name="Huisnummer" placeholder="Huisnummer" required>
+                        <br>
+                        <input type="text" name="Woonplaats" placeholder="Woonplaats" required>
+                        <br>
+                        <input type="text" name="Straat" placeholder="Straat" required>
+                        <br> 
+                        <input type="number" name="Bierflesje" min="1" max="24" placeholder="aantal" onchange="berekenen(ths.value)" required>
+                        <br> <br>
+                        <input type="submit" name="submit" value="versturen"> 
+                     </div>
+                  </div>
+    </body>
+</html>
